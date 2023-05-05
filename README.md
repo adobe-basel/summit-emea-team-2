@@ -1,5 +1,6 @@
-# Your Project's Title...
-Your project's description...
+# Adobe Summit EMEA
+
+Franklin prototype of the site https://summit-emea.adobe.com/emea
 
 ## Environments
 - Preview: https://main--summit-emea-team-2--adobe-basel.hlx.page/
