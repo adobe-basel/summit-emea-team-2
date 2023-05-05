@@ -12,16 +12,52 @@ Franklin prototype of the site https://summit-emea.adobe.com/emea
 npm i
 ```
 
+## Tests
+
+### Run
+
+```sh
+npm t
+```
+
+### Debug
+
+```sh
+npm run test:watch
+```
+
 ## Linting
 
 ```sh
-npm run lint
+npm run lint:js
 ```
 
-## Local development
+## Development
 
-1. Create a new repository based on the `helix-project-boilerplate` template and add a mountpoint in the `fstab.yaml`
-1. Add the [helix-bot](https://github.com/apps/helix-bot) to the repository
-1. Install the [Helix CLI](https://github.com/adobe/helix-cli): `npm install -g @adobe/helix-cli`
-1. Start Franklin Proxy: `hlx up` (opens your browser at `http://localhost:3000`)
-1. Open the `{repo}` directory in your favorite IDE and start coding :)
+### Run your site locally
+
+1. Install the [Helix CLI](https://github.com/adobe/helix-cli)
+   ```
+   npm install -g @adobe/helix-cli
+   ```
+2. Start Helix proxy
+   ```
+   hlx up
+   ```
+3. Go to [http://localhost:3000/](http://localhost:3000/)
+
+### Edit content
+
+Content is stored on Sharpoint.
+
+Open the URL in [fstab.yaml](./fstab.yaml) in your browser and start editing content.
+
+Put your test content under `/site/drafts/{your github handle}`.
+
+### Edit code
+
+Open this repository in your favorite IDE and hack it.
+
+Run your site locally to visualise the impact of your change.
+
+Use your browser developer extension to debug your code.
