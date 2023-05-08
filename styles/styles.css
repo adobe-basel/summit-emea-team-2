@@ -10,7 +10,14 @@
  * governing permissions and limitations under the License.
  */
 
- :root {
+@font-face {
+  font-family: "Adobe Clean Regular Fallback";
+  font-style: normal;
+  size-adjust: 90.13%;
+  src: local("Arial");
+}
+
+:root {
   /* colors */
   --link-color: #035fe6;
   --link-hover-color: #136ff6;
@@ -20,7 +27,8 @@
   --text-color: #000;
 
   /* fonts */
-  --body-font-family: 'helvetica neue', helvetica, ubuntu, roboto, noto, sans-serif;
+  --ff-adobe-clean-regular: 'adobe-clean', 'Adobe Clean Regular Fallback', 'helvetica neue', helvetica, arial, sans-serif;
+  --body-font-family: var(--ff-adobe-clean-regular);
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
