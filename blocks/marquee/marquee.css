@@ -6,18 +6,16 @@
 .marquee-wrapper {
   width: 100% !important;
   max-width: 100% !important;
-
-  --text-color: #2c2c2c;
 }
 
 .marquee {
   position: relative;
-  color: #FFF;
+  color: var(--text-color);
   display: flex;
 }
 
 .marquee.light {
-  color: var(--text-color);
+  color: var(--dark-background-text-color);
 }
 
 .marquee .foreground {
@@ -48,7 +46,7 @@
 
 .marquee .foreground .text .button-container {
   display: inline-block;
-  font-size: 14px;
+  font-size: var(--body-font-size-xs);
   font-style: normal;
   font-weight: 700;
   padding: 5px 0;

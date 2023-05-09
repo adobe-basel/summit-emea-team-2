@@ -28,6 +28,7 @@
   --highlight-background-color: #ccc;
   --header-background-color: #fafafa;
   --text-color: #000;
+  --dark-background-text-color: #fff;
 
   /* fonts */
   --ff-adobe-clean-regular: 'adobe-clean', 'Adobe Clean Regular Fallback', 'helvetica neue', helvetica, arial, sans-serif;
