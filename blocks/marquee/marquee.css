@@ -1,0 +1,93 @@
+.marquee-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.marquee-wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.marquee {
+  position: relative;
+  color: var(--text-color);
+  display: flex;
+}
+
+.marquee.light {
+  color: var(--dark-background-text-color);
+}
+
+.marquee .foreground {
+  margin: 0 auto;
+  min-height: 360px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  gap: 150px;
+}
+
+.marquee .foreground .text {
+  width: 100%;
+  max-width: 500px;
+}
+
+.marquee .foreground .text h1,
+.marquee .foreground .text h2 {
+  font-size: var(--heading-font-size-l);
+}
+
+.marquee .foreground .text p {
+  margin: 0;
+  font-size: var(--body-font-size-s);
+  line-height: var(--body-font-size-m);
+}
+
+.marquee .foreground .text .button-container {
+  display: inline-block;
+  font-size: var(--body-font-size-xs);
+  font-style: normal;
+  font-weight: 700;
+  padding: 5px 0;
+  text-decoration: none;
+}
+
+.marquee .foreground .text .button-container a {
+  padding: 5px 14px;
+}
+
+.marquee .foreground .media video,
+.marquee .foreground .media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 750px;
+  object-fit: cover;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .marquee .foreground {
+    gap: 0;
+    margin: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .marquee .foreground {
+    gap: 0;
+    margin: 25px;
+    margin-top: 0;
+    flex-direction: column;
+  }
+
+  .marquee .foreground .text {
+    order: 2;
+    max-width: 100%;
+  }
+
+  .marquee .foreground .media {
+    order: 1;
+  }
+}
