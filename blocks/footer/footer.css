@@ -1,14 +1,57 @@
 footer {
   padding: 2rem;
   background-color: var(--overlay-background-color);
-  font-size: var(--body-font-size-s);
+  font-size: var(--body-font-size-xs);
 }
 
 footer .footer {
   max-width: 1200px;
   margin: auto;
+  color: #2c2c2c;
 }
 
 footer .footer p {
   margin: 0;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul a:any-link {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+footer > div > div > div:nth-child(3) > ul {
+  border-bottom: 1px solid dimgray;
+}
+
+footer .icon {
+  width: 16px;
+}
+
+footer > div > div > div:nth-child(4) > ul:last-of-type > li {
+  display: inline;
+  padding-right: 15px;
+}
+
+footer .footer ul:last-of-type {
+  color: dimgray;
+}
+
+footer > div > div > div:nth-child(5) {
+  display: inline-block;
+  color: dimgray;
+  font-size: 11px;
+}
+
+footer > div > div > div:nth-child(5) > ul > li {
+  display: inline-block;
+}
+
+footer > div > div > div:nth-child(5) > ul  > li:not(:last-of-type)::after {
+  content: " /";
 }

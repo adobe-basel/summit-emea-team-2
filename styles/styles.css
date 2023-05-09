@@ -24,7 +24,7 @@
   --button-background-color: #0265dc;
   --button-hover-background-color: #0054b6;
   --background-color: #fff;
-  --overlay-background-color: #eee;
+  --overlay-background-color: white;
   --highlight-background-color: #ccc;
   --header-background-color: #fafafa;
   --text-color: #000;
@@ -44,7 +44,7 @@
   /* heading sizes */
   --heading-font-size-xxl: 48px;
   --heading-font-size-xl: 40px;
-  --heading-font-size-l: 32px;
+  --heading-font-size-l: 18px;
   --heading-font-size-m: 24px;
   --heading-font-size-s: 16px;
   --heading-font-size-xs: 14px;
