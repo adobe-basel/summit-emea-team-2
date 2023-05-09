@@ -6,6 +6,7 @@
 .marquee-wrapper {
   width: 100% !important;
   max-width: 100% !important;
+  
   --text-color: #2c2c2c;
 }
 

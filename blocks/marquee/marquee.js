@@ -26,7 +26,6 @@ const decorateImage = (media) => {
 };
 
 export default async function decorate(el) {
-  console.log(el)
   const isLight = el.classList.contains('light');
   if (!isLight) el.classList.add('dark');
   const children = el.querySelectorAll(':scope > div');
