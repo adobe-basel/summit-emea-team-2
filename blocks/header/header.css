@@ -53,6 +53,10 @@ header nav p {
   line-height: 1;
 }
 
+header nav a {
+  text-decoration: none !important;
+}
+
 header nav a:any-link {
   color: currentcolor;
 }
@@ -214,7 +218,7 @@ header nav .nav-sections ul > li > ul > li {
     width: 5px;
     height: 5px;
     margin-left: 9px;
-    border-width: 0px 1px 1px 0px;
+    border-width: 0 1px 1px 0;
     border-style: solid;
     border-color: #2c2c2c;
     transform-origin: 75% 75%;
@@ -288,15 +292,11 @@ header nav .nav-tools a {
   border: 2px solid var(--button-background-color);
   line-height: 1;
   border-radius: 16px;
-  margin: 0px 8px;
-  padding: 5px 14px 6px 14px;
+  margin: 0 8px;
+  padding: 5px 14px 6px;
 }
 
 header nav .nav-tools a:hover {
   background: var(--button-hover-background-color);
   border: 2px solid var(--button-hover-background-color);
-}
-
-header nav a {
-  text-decoration: none !important;
 }
