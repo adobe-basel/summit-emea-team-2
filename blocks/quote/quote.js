@@ -3,7 +3,7 @@ import { div } from '../../scripts/dom-helpers.js';
 export default async function decorate(block) {
   const quote = block.querySelector('p');
   const author = block.querySelector('p:nth-child(2)');
-  const image = block.querySelector('picture img');
+  const image = block.querySelector('picture source:nth-child(1)');
 
   const quoteBlock = div(
     { class: 'quote-block' },
@@ -25,7 +25,7 @@ export default async function decorate(block) {
           ),
         ),
         div(
-          { class: 'quote-image col-12 col-lg-6', style: `background-image: url(${image.src})`, preload: 'metadata' },
+          { class: 'quote-image col-12 col-lg-6', style: `background-image: url(${image.srcset})`, preload: 'metadata' },
           div({ class: 'summit-quote-sliver green' }),
           div({ class: 'summit-quote-right red' }),
         ),
