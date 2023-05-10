@@ -1,6 +1,8 @@
 .speaker-container {
   padding-left: 0 !important;
   padding-right: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .speaker-wrapper {
@@ -13,8 +15,6 @@
   margin: auto;
   max-width: 1200px;
   width: 100%;
-  padding-top: 80px;
-  padding-bottom: 76px;
 }
 
 .speaker h2 {
