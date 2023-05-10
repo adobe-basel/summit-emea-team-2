@@ -1,6 +1,6 @@
 footer {
   padding: 2rem;
-  background-color: var(--overlay-background-color);
+  background-color: var(--footer-background-color);
   font-size: var(--body-font-size-xs);
 }
 
@@ -14,6 +14,10 @@ footer .footer p {
   margin: 0;
 }
 
+footer .mailing-list-sign-up {
+  border-bottom: 1px solid black;
+}
+
 footer ul {
   list-style: none;
   padding: 0;
@@ -25,33 +29,61 @@ footer ul a:any-link {
   text-decoration: none;
 }
 
-footer > div > div > div:nth-child(3) > ul {
+footer > div > div > div:nth-child(1) {
+  display: none;
+}
+
+footer > div > div > div:nth-child(3) {
   border-bottom: 1px solid dimgray;
+  padding-bottom: 30px;
+}
+
+footer > div > div > div:nth-child(4) {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+footer > div > div > div:nth-child(6) {
+  display: inline-block;
+  color: dimgray;
+  font-size: 11px;
+}
+
+footer > div > div > div:nth-child(2) > div {
+  padding-bottom: 30px;
+}
+
+footer > div > div > div:nth-child(4) > ul {
+  border-bottom: 1px solid #d9d9d9;
+  padding-bottom: 30px;
 }
 
 footer .icon {
   width: 16px;
 }
 
-footer > div > div > div:nth-child(4) > ul:last-of-type > li {
+footer > div > div > div:nth-child(6) .icon {
+  width: 10px;
+  height: 9px;
+}
+
+footer > div > div > div:nth-child(6) a:any-link {
+  color: dimgray;
+}
+
+footer > div > div > div:nth-child(6) > ul > li {
+  display: inline-block;
+}
+
+footer > div > div > div:nth-child(6) > ul  > li:not(:last-of-type)::after {
+  content: " /";
+}
+
+footer > div > div > div:nth-child(5) > ul:last-of-type > li {
   display: inline;
   padding-right: 15px;
 }
 
 footer .footer ul:last-of-type {
   color: dimgray;
-}
-
-footer > div > div > div:nth-child(5) {
-  display: inline-block;
-  color: dimgray;
-  font-size: 11px;
-}
-
-footer > div > div > div:nth-child(5) > ul > li {
-  display: inline-block;
-}
-
-footer > div > div > div:nth-child(5) > ul  > li:not(:last-of-type)::after {
-  content: " /";
 }
