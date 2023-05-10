@@ -17,6 +17,12 @@
   padding-bottom: 76px;
 }
 
+.speaker h2 {
+  color: white;
+  margin: 0;
+  font-size: var(--heading-font-size-s);
+}
+
 .speaker > ul {
   list-style: none;
   margin: 0;
@@ -27,19 +33,15 @@
 }
 
 .speaker > ul > li {
-  box-sizing: content-box;
   background-color: #2C2C2C;
-  box-sizing: border-box;
   transition: all .85s ease-in-out;
 }
 
 .speaker > ul > li.text {
-  box-sizing: content-box;
   background-color: transparent;
 }
 
 .speaker > ul > li.image {
-  box-sizing: content-box;
   background-color: transparent;
 }
 
@@ -134,7 +136,11 @@
     background-color: #2C2C2C;
   }
 
-  .speaker > ul > li {
+  .speaker h2 {
+    visibility: hidden;
+  }
+
+  .speaker > ul > li:not(.text) {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -150,10 +156,14 @@
   }
 
   .speaker > ul > li.text {
-    box-sizing: content-box;
     background-color: transparent;
     order: -1;
-    margin-bottom: 50px;
+  }
+
+  .speaker > ul > li.text > .cards-card-body {
+    height: auto;
+    max-height: none;
+    margin: 0;
   }
 
   .speaker > ul > li.text h1,

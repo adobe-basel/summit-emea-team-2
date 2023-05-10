@@ -45,7 +45,7 @@ export default function decorate(block) {
   const viewPortCardData = [];
   /* change to ul, li */
   const ul = document.createElement('ul');
-  [...block.children].forEach((row, rind) => {
+  [...block.children].slice(1, block.children.length).forEach((row, rind) => {
     const li = document.createElement('li');
     li.innerHTML = row.innerHTML;
     const tmpViewPortData = {};
@@ -96,7 +96,9 @@ export default function decorate(block) {
     ul.append(li);
   });
   ul.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
+  const title = block.children[0].querySelector('h2');
   block.textContent = '';
+  block.append(title);
   block.append(ul);
 
   // capture resize events
