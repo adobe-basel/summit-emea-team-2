@@ -53,13 +53,45 @@ footer > div > div > div:nth-child(2) > div {
   padding-bottom: 30px;
 }
 
+footer .icon {
+  width: 16px;
+}
+
+footer > div > div > div:nth-child(4) > h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  padding-right: 16px;
+}
+
 footer > div > div > div:nth-child(4) > ul {
+  height: 0;
+  overflow: hidden;
   border-bottom: 1px solid #d9d9d9;
+}
+
+footer > div > div > div:nth-child(4) > ul.expanded {
+  height: 100%;
   padding-bottom: 30px;
 }
 
-footer .icon {
-  width: 16px;
+footer > div > div > div:nth-child(4) > h3::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  vertical-align: 2px;
+  margin-top: -5px;
+  margin-right: 15px;
+  border-color: #2c2c2c;
+  border-width: 0 2px 2px 0;
+  border-style: solid;
+  transform-origin: 75% 75%;
+  transform: rotate(45deg);
+  top: 50%;
+  right: 0;
+  left: auto;
 }
 
 footer > div > div > div:nth-child(6) .icon {
