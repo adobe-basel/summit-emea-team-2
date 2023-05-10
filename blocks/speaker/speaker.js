@@ -1,36 +1,106 @@
-const decorateVideo = (container) => {
-  const link = container.querySelector('a[href$=".mp4"]');
+import { createOptimizedPicture } from '../../scripts/lib-franklin.js';
 
-  container.innerHTML = `<video preload="metadata" playsinline autoplay muted loop>
-    <source src="${link.href}" type="video/mp4" />
-  </video>`;
-};
+let gul = null;
+let gdata = [];
+let previousWindowWidth = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
 
-const decorateBlockBg = (block, node) => {
-  if (!node.querySelector(':scope img') && !node.querySelector(':scope video')) {
-    block.style.background = node.textContent;
-    node.remove();
+function handleWindowResize() {
+  const windowWidth = window.innerWidth
+  || document.documentElement.clientWidth
+  || document.body.clientWidth;
+
+  if (!gul || gdata.length === 0
+    || ((previousWindowWidth <= 768 && windowWidth <= 768)
+    || (previousWindowWidth > 768 && windowWidth > 768))
+  ) {
+    return;
   }
-};
 
-const decorateImage = (media) => {
-  media.classList.add('image');
-
-  const imageLink = media.querySelector('a');
-  const picture = media.querySelector('picture');
-
-  if (imageLink && picture) {
-    imageLink.textContent = '';
-    imageLink.append(picture);
+  if (windowWidth <= 768) {
+    gdata.forEach((item) => {
+      gul.children[item.row].querySelector('picture').replaceWith(item.mobile);
+      if (!gul.children[item.row].querySelector('.cards-card-body')) {
+        gul.children[item.row].append(item.text);
+        gul.children[item.row].classList.toggle('image');
+      }
+    });
+  } else {
+    gdata.forEach((item) => {
+      gul.children[item.row].querySelector('picture').replaceWith(item.desktop);
+      gul.children[item.row].querySelector('.cards-card-body')?.remove();
+      gul.children[item.row].classList.toggle('image');
+    });
   }
-};
 
-export default async function init(el) {
-  // decorate item contents
-  const children = el.querySelectorAll(':scope > div > div');
-  console.log(children)
-  if(children.length === 2) {
-    children[0].classList.add('image');
-    children[1].classList.add('text');
-  }
+  previousWindowWidth = windowWidth;
+}
+
+export default function decorate(block) {
+  const windowWidth = window.innerWidth
+  || document.documentElement.clientWidth
+  || document.body.clientWidth;
+
+  const viewPortCardData = [];
+  /* change to ul, li */
+  const ul = document.createElement('ul');
+  [...block.children].forEach((row, rind) => {
+    const li = document.createElement('li');
+    li.innerHTML = row.innerHTML;
+    const tmpViewPortData = {};
+    [...li.children].forEach((div) => {
+      if (div.querySelector(':scope picture')) {
+        div.className = 'cards-card-image';
+        // check if two images are provided for desktop / mobile
+        const images = div.querySelectorAll('picture');
+        if (images.length > 1) {
+          const [desk, mob] = images;
+          tmpViewPortData.row = rind;
+          tmpViewPortData.desktop = desk;
+          tmpViewPortData.mobile = mob;
+          if (windowWidth <= 768) {
+            images[0].remove();
+          } else {
+            images[1].remove();
+          }
+        }
+      } else if (div.children.length >= 1) {
+        div.className = 'cards-card-body';
+        tmpViewPortData.text = div;
+      } else {
+        div.remove();
+      }
+    });
+    // viewport handling
+    if (Object.keys(tmpViewPortData).length > 1 && tmpViewPortData.text && windowWidth > 768) {
+      li.querySelector('.cards-card-body').remove();
+    }
+    if (Object.keys(tmpViewPortData).length > 1) {
+      viewPortCardData.push(tmpViewPortData);
+    }
+    // special cases
+    if (!li.querySelector(':scope picture')) {
+      li.classList.add('text');
+    } else if (!li.querySelector(':scope p')) {
+      li.classList.add('image');
+    } else {
+      const bleft = document.createElement('div');
+      bleft.classList.add('border-left');
+      const bb = document.createElement('div');
+      bb.classList.add('border-bottom');
+      const imdiv = li.querySelector('.cards-card-image');
+      imdiv.append(bleft);
+      imdiv.append(bb);
+    }
+    ul.append(li);
+  });
+  ul.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
+  block.textContent = '';
+  block.append(ul);
+
+  // capture resize events
+  gul = ul;
+  gdata = viewPortCardData;
+  window.onresize = handleWindowResize;
 }
