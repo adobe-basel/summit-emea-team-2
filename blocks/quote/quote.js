@@ -25,7 +25,7 @@ export default async function decorate(block) {
           ),
         ),
         div(
-          { class: 'quote-image col-12 col-lg-6', style: `background-image: url(${image.src})` },
+          { class: 'quote-image col-12 col-lg-6', style: `background-image: url(${image.src})`, preload: 'metadata' },
           div({ class: 'summit-quote-sliver green' }),
           div({ class: 'summit-quote-right red' }),
         ),
