@@ -26,6 +26,8 @@
   --background-color: #fff;
   --overlay-background-color: #eee;
   --highlight-background-color: #ccc;
+  --dark-background-color: #000;
+  --dark-mobile-background-color: #2C2C2C;
   --header-background-color: #fafafa;
   --text-color: #000;
   --dark-background-text-color: #fff;
@@ -252,4 +254,20 @@ main .section {
 /* section metadata */
 main .section.highlight {
   background-color: var(--highlight-background-color);
+}
+
+main .section.dark {
+  background-color: var(--dark-background-color);
+}
+
+main .section.no-padding,
+main .section.no-padding p {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  main .section.dark {
+    background-color: var(--dark-mobile-background-color);
+  } 
 }
