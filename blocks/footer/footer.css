@@ -14,6 +14,10 @@ footer .footer p {
   margin: 0;
 }
 
+footer h3 {
+  font-size: 18px;
+}
+
 footer .mailing-list-sign-up {
   border-bottom: 1px solid black;
 }
