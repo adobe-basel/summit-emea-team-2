@@ -5,7 +5,7 @@
 }
 
 .go-deep > div:first-child {
-    background-color: #fff;
+    background-color: var(--background-color);
     padding: 30px 20px 0 30px;
 }
 
