@@ -24,11 +24,12 @@
   --button-background-color: #0265dc;
   --button-hover-background-color: #0054b6;
   --background-color: #fff;
-  --overlay-background-color: #eee;
+  --overlay-background-color: white;
   --highlight-background-color: #ccc;
   --dark-background-color: #000;
   --dark-mobile-background-color: #2C2C2C;
   --header-background-color: #fafafa;
+  --footer-background-color: #fafafa;
   --text-color: #000;
   --dark-background-text-color: #fff;
 

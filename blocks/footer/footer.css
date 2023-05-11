@@ -1,14 +1,131 @@
 footer {
   padding: 2rem;
-  background-color: var(--overlay-background-color);
-  font-size: var(--body-font-size-s);
+  background-color: var(--footer-background-color);
+  font-size: var(--body-font-size-xs);
 }
 
 footer .footer {
   max-width: 1200px;
   margin: auto;
+  color: #2c2c2c;
 }
 
 footer .footer p {
   margin: 0;
+}
+
+footer h3 {
+  font-size: 18px;
+}
+
+footer .mailing-list-sign-up {
+  border-bottom: 1px solid black;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul a:any-link {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+footer > div > div > div:nth-child(1) {
+  display: none;
+}
+
+footer > div > div > div:nth-child(3) {
+  border-bottom: 1px solid dimgray;
+  padding-bottom: 30px;
+}
+
+footer > div > div > div:nth-child(4) {
+  margin-bottom: 40px;
+}
+
+footer > div > div > div:nth-child(6) {
+  display: inline-block;
+  color: dimgray;
+  font-size: 11px;
+}
+
+footer > div > div > div:nth-child(2) > div {
+  padding-bottom: 30px;
+}
+
+footer .icon {
+  width: 16px;
+}
+
+footer > div > div > div:nth-child(4) > h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  padding-right: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+footer > div > div > div:nth-child(4) > ul {
+  height: 0;
+  overflow: hidden;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+footer > div > div > div:nth-child(4) > ul.expanded {
+  height: 100%;
+  padding-bottom: 30px;
+}
+
+
+footer > div > div > div:nth-child(4) > h3::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  vertical-align: 2px;
+  margin-top: -5px;
+  margin-right: 15px;
+  border-color: #2c2c2c;
+  border-width: 0 2px 2px 0;
+  border-style: solid;
+  transform-origin: 75% 75%;
+  transform: rotate(45deg);
+  top: 50%;
+  right: 0;
+  left: auto;
+}
+
+footer > div > div > div:nth-child(4) > h3.expanded::after {
+  transform: rotate(-135deg);
+}
+
+footer > div > div > div:nth-child(6) .icon {
+  width: 10px;
+  height: 9px;
+}
+
+footer > div > div > div:nth-child(6) a:any-link {
+  color: dimgray;
+}
+
+footer > div > div > div:nth-child(6) > ul > li {
+  display: inline-block;
+}
+
+footer > div > div > div:nth-child(6) > ul  > li:not(:last-of-type)::after {
+  content: " /";
+}
+
+footer > div > div > div:nth-child(5) > ul:last-of-type > li {
+  display: inline;
+  padding-right: 15px;
+}
+
+footer .footer ul:last-of-type {
+  color: dimgray;
 }

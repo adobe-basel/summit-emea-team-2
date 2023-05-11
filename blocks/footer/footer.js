@@ -19,6 +19,13 @@ export default async function decorate(block) {
     const footer = document.createElement('div');
     footer.innerHTML = html;
 
+    footer.querySelectorAll(':scope > div:nth-child(4) > h3').forEach((el) => {
+      el.addEventListener('click', () => {
+        el.classList.toggle('expanded');
+        el.nextElementSibling.classList.toggle('expanded');
+      });
+    });
+
     decorateIcons(footer);
     block.append(footer);
   }
