@@ -17,7 +17,7 @@
 }
 
 .quote .summit-quote-left.blue-background {
-  background-image: linear-gradient(to bottom right, #0c50d3, #0c50d3),url("/images/blue-background.png");
+  background-image: linear-gradient(to bottom right, #0c50d3, #0c50d3),url("/images/blue-background.webp");
 }
 
 .quote .summit-quote-left {
@@ -32,7 +32,7 @@
 }
 
 .quote .summit-quote-right.red-background {
-  background-image: url('/images/red-background.png');
+  background-image: url('/images/red-background.webp');
 }
 
 .quote .summit-quote-right {
@@ -109,7 +109,7 @@
 }
 
 .quote .summit-quote-sliver.green {
-  background-image: url('/images/green-background.png');
+  background-image: url('/images/green-background.webp');
 }
 
 .quote .summit-quote-sliver {
