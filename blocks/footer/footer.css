@@ -37,6 +37,13 @@ footer > div > div > div:nth-child(1) {
   display: none;
 }
 
+footer > div > div > div:nth-child(1) span {
+  display: inline-block;
+  width: 15px;
+  height: auto;
+  padding-right: 5px;
+}
+
 footer > div > div > div:nth-child(3) {
   border-bottom: 1px solid dimgray;
   padding-bottom: 30px;
@@ -128,4 +135,70 @@ footer > div > div > div:nth-child(5) > ul:last-of-type > li {
 
 footer .footer ul:last-of-type {
   color: dimgray;
+}
+
+@media (min-width: 992px) {
+  footer > div > div {
+    display: grid;
+    grid-template-columns: 65%;
+  }
+
+  footer > div > div > div:nth-child(1) {
+    display: block;
+  }
+
+  footer .mailing-list-sign-up {
+    border-bottom: 0;
+  }
+
+  footer > div > div > div:nth-child(2) {
+    grid-row: 2 / 3;
+    padding-left: 50px;
+  }
+
+  footer > div > div > div:nth-child(3) {
+    grid-row: 2 / 3;
+    border-bottom: 0;
+  }
+
+  footer > div > div > div:nth-child(4) {
+    display: grid;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    border-right: 1px solid #cecece;
+  }
+
+  footer > div > div > div:nth-child(4) > h3 {
+    grid-row: 1 / 2;
+  }
+
+  footer > div > div > div:nth-child(4) > h3::after {
+    display: none;
+
+  }
+
+  footer > div > div > div:nth-child(4) > ul {
+    height: auto;
+    border-bottom: 0;
+  }
+
+  footer > div > div > div:nth-child(5) {
+    grid-row: 3 / 4;
+  }
+
+  footer > div > div > div:nth-child(6) {
+    display: flex;
+    grid-row: 4 / 5;
+    grid-column: 1 / 4;
+    justify-content: flex-end;
+  }
+
+  footer > div > div > div:nth-child(6) > p {
+    display: inline;
+    padding-right: 15px;
+  }
+
+  footer > div > div > div:nth-child(6) > ul {
+    display: inline;
+  }
 }
