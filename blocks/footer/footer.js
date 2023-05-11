@@ -1,4 +1,5 @@
 import { readBlockConfig, decorateIcons } from '../../scripts/lib-franklin.js';
+import { li } from '../../scripts/dom-helpers.js';
 
 /**
  * loads and decorates the footer
@@ -25,6 +26,12 @@ export default async function decorate(block) {
         el.nextElementSibling.classList.toggle('expanded');
       });
     });
+
+    const originalSocial = footer.querySelector(':scope > div:nth-child(5)');
+    originalSocial.classList.add('social-buttons');
+    const clonedSocial = li(originalSocial.cloneNode(true));
+    const connectWithUs = footer.querySelector(':scope > div:nth-child(4) > ul:nth-of-type(2)');
+    connectWithUs.appendChild(clonedSocial.cloneNode(true));
 
     decorateIcons(footer);
     block.append(footer);

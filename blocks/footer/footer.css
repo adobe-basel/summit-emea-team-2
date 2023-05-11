@@ -33,6 +33,15 @@ footer ul a:any-link {
   text-decoration: none;
 }
 
+footer > div > div > div:nth-child(4) .social-buttons {
+  display: none;
+}
+
+footer .social-buttons > ul > li {
+  display: inline;
+  padding-right: 15px;
+}
+
 footer > div > div > div:nth-child(1) {
   display: none;
 }
@@ -128,11 +137,6 @@ footer > div > div > div:nth-child(6) > ul  > li:not(:last-of-type)::after {
   content: " /";
 }
 
-footer > div > div > div:nth-child(5) > ul:last-of-type > li {
-  display: inline;
-  padding-right: 15px;
-}
-
 footer .footer ul:last-of-type {
   color: dimgray;
 }
@@ -182,8 +186,13 @@ footer .footer ul:last-of-type {
     border-bottom: 0;
   }
 
-  footer > div > div > div:nth-child(5) {
-    grid-row: 3 / 4;
+  footer > div > div > div:nth-child(4) .social-buttons {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  footer > div > div > div:nth-child(5).social-buttons {
+    display: none;
   }
 
   footer > div > div > div:nth-child(6) {
