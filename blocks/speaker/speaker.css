@@ -65,6 +65,11 @@
 .speaker > ul > li img {
   width: 100%;
   object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+.speaker > ul > li:nth-child(3) img {
+  aspect-ratio: 16 / 9;
 }
 
 .speaker .cards-card-image .border-left {
@@ -155,6 +160,10 @@
   .speaker > ul > li.text {
     background-color: transparent;
     order: -1;
+  }
+
+  .speaker > ul > li:nth-child(3) img {
+    aspect-ratio: 1 / 1;
   }
 
   .speaker > ul > li.text > .cards-card-body {
