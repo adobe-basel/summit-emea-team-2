@@ -14,7 +14,7 @@
   background-color: #f5f5f5;
 }
 
-.button-container a {
+.sponsors .button-container a {
   background-color: #f5f5f5 !important;
   border-radius: 0;
   text-decoration: underline !important;
@@ -31,12 +31,13 @@
 }
 
 @media (max-width: 1023px) {
-  .button-container a {
+  .sponsors .button-container a {
     margin: 0 5px !important;
     padding: 0 !important;
   }
 
-  h2 {
+
+  .sponsors h2 {
     font-size: 20px;
     line-height: 32px;
     margin-bottom: 20px;
