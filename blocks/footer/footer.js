@@ -23,6 +23,7 @@ export default async function decorate(block) {
       console.log('el', el);
       el.addEventListener('click', (e) => {
         console.log('click', e.target, el);
+        el.classList.toggle('expanded');
         el.nextElementSibling.classList.toggle('expanded');
       });
     });
