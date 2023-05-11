@@ -24,7 +24,6 @@
   flex-direction: row;
   align-items: center;
   padding: 0;
-  gap: 150px;
 }
 
 .marquee .foreground .text {
@@ -66,7 +65,7 @@
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1500px) {
   .marquee .foreground {
     gap: 0;
     margin: 25px;
