@@ -1,7 +1,7 @@
 const decorateVideo = (container) => {
   const link = container.querySelector('a[href$=".mp4"]');
 
-  container.innerHTML = `<video class="lazy" playsinline autoplay muted loop poster="/images/marquee-video-poster.png">
+  container.innerHTML = `<video class="lazy" playsinline autoplay muted loop poster="https://main--summit-emea-team-2--adobe-basel.hlx.page/media_12122d7122f48b69084636bb24c4a0cea990b880a.png#width=3446&height=1940">
     <source src="${link.href}" type="video/mp4" />
   </video>`;
 };
