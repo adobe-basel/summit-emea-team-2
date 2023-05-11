@@ -5,9 +5,8 @@
 }
 
 .go-deep > div:first-child {
-    /*background-color: #fff;*/
+    background-color: #fff;
     padding: 30px 20px 0px 30px;
-    background-color: green;
 }
 
 .go-deep picture {
