@@ -20,9 +20,7 @@ export default async function decorate(block) {
     footer.innerHTML = html;
 
     footer.querySelectorAll(':scope > div:nth-child(4) > h3').forEach((el) => {
-      console.log('el', el);
       el.addEventListener('click', (e) => {
-        console.log('click', e.target, el);
         el.classList.toggle('expanded');
         el.nextElementSibling.classList.toggle('expanded');
       });
