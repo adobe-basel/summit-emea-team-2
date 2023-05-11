@@ -136,11 +136,6 @@
     height: 320px;
   }
 
-  .quote .row > * {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
   .quote .summit-quote-sliver {
     width: 70px;
   }
@@ -202,5 +197,17 @@
 @media (min-width: 1200px) {
   .quote .summit-quote-container {
     max-width: 1024px;
+  }
+}
+
+@media (min-width: 1360px) {
+  .quote .summit-quote-container {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1720px) {
+  .quote .summit-quote-right {
+    width: 30%;
   }
 }
